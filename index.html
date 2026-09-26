@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>REDSHADE // AI Core</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<canvas id="canvas-rain"></canvas>
+<div class="bot-ghost"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+
+<div class="shell">
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-name">RED<span>SHADE</span></div>
+    </div>
+    <div class="status-pill"><span class="dot"></span> SYSTEM ONLINE</div>
+    <div class="clock" id="clock">00:00:00</div>
+  </div>
+
+  <div class="main">
+    <div class="panel side left">
+      <div>
+        <div class="panel-title">SYSTEM STATUS</div>
+        <div class="metric">
+          <div class="metric-label"><span>CPU</span><span id="cpuVal">24%</span></div>
+          <div class="bar"><div class="bar-fill" id="cpuBar" style="width:24%"></div></div>
+        </div>
+        <div class="metric">
+          <div class="metric-label"><span>RAM</span><span id="ramVal">53%</span></div>
+          <div class="bar"><div class="bar-fill" id="ramBar" style="width:53%"></div></div>
+        </div>
+        <div class="net-row"><span>NETWORK</span><b>ONLINE</b></div>
+        <div class="net-row"><span>AI CORE</span><b id="aiCoreStat">READY</b></div>
+      </div>
+      <div>
+        <div class="panel-title">TOOLS / TASKS</div>
+        <div class="task-count">
+          <div class="count-box"><div class="n">12</div><div class="l">TOOLS</div></div>
+          <div class="count-box"><div class="n" id="taskN">02</div><div class="l">TASKS</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel center">
+      <div class="avatar-row">
+        <div class="avatar"><div class="avatar-eyes"><div class="eye"></div><div class="eye"></div></div></div>
+        <div class="avatar-info">
+          <div class="label">AI CORE // v0.1</div>
+          <div class="state" id="avatarState">STATUS: <em>IDLE</em></div>
+        </div>
+      </div>
+      <div class="chat-window" id="chatWindow">
+        <div class="msg ai"><span class="tag">REDSHADE</span>Systems nominal. How can I help you?</div>
+      </div>
+      <div class="input-row">
+        <input id="cmdInput" type="text" placeholder="Type your command..." autocomplete="off">
+        <button class="icon-btn mic" id="micBtn" title="Voice input">&#127908;</button>
+        <button class="icon-btn send" id="sendBtn" title="Send">&#10148;</button>
+      </div>
+    </div>
+
+    <div class="panel side right">
+      <div class="panel-title">TASKS</div>
+      <div class="task-item done"><span class="mark">✓</span> Research targets</div>
+      <div class="task-item"><span class="mark">●</span> Download files</div>
+      <div class="task-item"><span class="mark">○</span> Compile report</div>
+      <div class="progress-wrap">
+        <div class="progress-label">CURRENT TASK — Downloading...</div>
+        <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-log" id="footerLog">&gt; boot sequence complete. awaiting input_</div>
+</div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
